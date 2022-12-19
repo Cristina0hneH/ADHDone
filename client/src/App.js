@@ -1,7 +1,12 @@
-import './App.css';
+import './App.scss';
+import EditTask from './views/EditTask';
 
 function App() {
-  return <h1>Suxx</h1>;
+  return (
+    <div id="app">
+      <EditTask />
+    </div>
+  );
 }
 
 export default App;
