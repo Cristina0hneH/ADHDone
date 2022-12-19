@@ -1,12 +1,15 @@
-const mongoose = require('mongoose');
+module.exports = () =>{
+  console.log("test")
 
-//mongoose.connect('mongodb://localhost:27017/mydatabase', { useNewUrlParser: true });
+  mongoose
+    .connect(process.env.CONNECTION_STRING) 
+    .then(() => {console.log("Connected to MongoDb")
+    mongoose.Promise = global.Promise;}
+)
+    .catch((err) => {
+      console.log(err);
+    });
 
-const db = mongoose.connection;
-
-//db.on('error', console.error.bind(console, 'connection error:'));
-
-//db.once('open', function() {
-    
-
-});
+const mongoose = require("mongoose")
+mongoose.set("strictQuery", true);
+mongoose.connect(process.env.CONNECTION_STRING).catch((err)=>{console.log(err)})};
