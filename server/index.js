@@ -8,3 +8,5 @@ app.listen(port, () => {
     app.get("/", (req, res) => {console.log("ye boii")
         res.json("i did it!")
     });
+
+    // now I need to add more crud operations and post mock data using the data models I created as a template
